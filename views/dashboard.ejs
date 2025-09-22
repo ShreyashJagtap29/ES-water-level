@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Level Monitoring Dashboard</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="/embed.jpeg" alt="Logo" class="nav-logo">
+            <span>Water Level Monitoring</span>
+        </div>
+        <div class="nav-menu">
+            <a href="/dashboard" class="nav-link active">Dashboard</a>
+            <a href="/documentation" class="nav-link">Documentation</a>
+            <form action="/logout" method="POST" style="display: inline;">
+                <button type="submit" class="logout-btn">Logout</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="company-info">
+                <img src="/embed.jpeg" alt="Embedsol Technologies" class="company-logo-large">
+                <div class="company-details">
+                    <h1>Embedsol Technologies LLP</h1>
+                    <h2>Water Level Monitoring System</h2>
+                    <p>Real-time water level monitoring and alert system</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="monitoring-panel">
+                <h3>Live Water Level Status</h3>
+                <div class="water-level-display">
+                    <div class="level-indicator">
+                        <div class="water-tank">
+                            <div class="water-level" id="waterLevel"></div>
+                            <div class="tank-markings">
+                                <div class="marking high">High (80%)</div>
+                                <div class="marking normal">Normal (50%)</div>
+                                <div class="marking low">Low (20%)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level-info">
+                        <div class="info-card">
+                            <h4>Current Level</h4>
+                            <p id="currentLevel">Loading...</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Status</h4>
+                            <p id="status">Loading...</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Last Updated</h4>
+                            <p id="lastUpdated">Loading...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <button onclick="refreshData()" class="action-btn">Refresh Data</button>
+                <a href="/documentation" class="action-btn">View Documentation</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascripts/dashboard.js"></script>
+</body>
+</html>

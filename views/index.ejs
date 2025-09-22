@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Dashboard</h1>
+    <img src="/embed.jpeg" alt="Company Logo" style="width: 100px;">
+    <h2>Company: EmbedSol Technologies LLP</h2>
+    <h2>Project: Water Level Monitoring System</h2>
+    <p>Welcome, <%= session.user %>! This is the main dashboard for the water level monitoring project.</p>
+    <a href="/docs">View Project Documentation</a><br>
+    <a href="/logout">Logout</a>
+  </body>
+</html>

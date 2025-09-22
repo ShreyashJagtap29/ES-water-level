@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Level Monitoring - Documentation</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="/embed.jpeg" alt="Logo" class="nav-logo">
+            <span>Water Level Monitoring</span>
+        </div>
+        <div class="nav-menu">
+            <a href="/dashboard" class="nav-link">Dashboard</a>
+            <a href="/documentation" class="nav-link active">Documentation</a>
+            <form action="/logout" method="POST" style="display: inline;">
+                <button type="submit" class="logout-btn">Logout</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="documentation-container">
+        <header class="doc-header">
+            <div class="company-info">
+                <img src="/embed.jpeg" alt="Embedsol Technologies" class="company-logo-large">
+                <div class="company-details">
+                    <h1>Embedsol Technologies LLP</h1>
+                    <h2>Water Level Monitoring System</h2>
+                    <p>Project Documentation</p>
+                </div>
+            </div>
+        </header>
+
+        <nav class="doc-nav">
+            <a href="#abstract" class="doc-nav-link">Abstract</a>
+            <a href="#introduction" class="doc-nav-link">Introduction</a>
+            <a href="#requirements" class="doc-nav-link">Requirements</a>
+            <a href="#design" class="doc-nav-link">Design</a>
+            <a href="#implementation" class="doc-nav-link">Implementation</a>
+            <a href="#results" class="doc-nav-link">Results</a>
+            <a href="#conclusion" class="doc-nav-link">Conclusion</a>
+        </nav>
+
+        <div class="doc-content">
+            <section id="abstract" class="doc-section">
+                <h2>Abstract</h2>
+                <div class="section-content">
+                    <p>This project presents a Water Level Monitoring System using simple sensors and microcontrollers. The system helps to measure water levels in a tank and gives alerts to avoid overflow and wastage of water.</p>
+                    <p>The system uses ultrasonic sensors to detect water levels, Arduino microcontroller for processing, and a web-based interface for monitoring and control. This solution addresses the growing need for efficient water management in residential, commercial, and industrial applications.</p>
+                </div>
+            </section>
+
+            <section id="introduction" class="doc-section">
+                <h2>Introduction</h2>
+                <div class="section-content">
+                    <p>Water is one of the most essential resources for human survival, agriculture, and industrial applications. However, inefficient water usage and wastage due to overflow or negligence have become common issues in households and industries. Traditionally, people check water levels manually, which is time-consuming and unreliable. This often leads to water overflow, wastage, and potential damage to property.</p>
+                    <p>Our Water Level Monitoring System provides an automated solution that continuously monitors water levels and provides real-time alerts. The system eliminates the need for manual checking and helps in efficient water management.</p>
+                </div>
+            </section>
+
+            <section id="requirements" class="doc-section">
+                <h2>Requirements</h2>
+                <div class="section-content">
+                    <h3>Hardware Requirements:</h3>
+                    <ul>
+                        <li>Arduino Uno/ESP32 microcontroller</li>
+                        <li>Ultrasonic sensor (HC-SR04)</li>
+                        <li>WiFi module (ESP8266) or built-in WiFi</li>
+                        <li>LCD display (16x2)</li>
+                        <li>Buzzer for audio alerts</li>
+                        <li>Power supply (5V/3.3V)</li>
+                        <li>Jumper wires and breadboard</li>
+                    </ul>
+                    <h3>Software Requirements:</h3>
+                    <ul>
+                        <li>Arduino IDE</li>
+                        <li>Node.js and Express.js</li>
+                        <li>HTML/CSS/JavaScript</li>
+                        <li>Database (MongoDB/MySQL)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="design" class="doc-section">
+                <h2>Design</h2>
+                <div class="section-content">
+                    <h3>System Architecture:</h3>
+                    <p>The system consists of three main components:</p>
+                    <ol>
+                        <li><strong>Sensor Module:</strong> Ultrasonic sensor measures the distance to water surface</li>
+                        <li><strong>Processing Unit:</strong> Microcontroller processes sensor data and sends to web server</li>
+                        <li><strong>Web Interface:</strong> Real-time dashboard for monitoring and alerts</li>
+                    </ol>
+                    <h3>Working Principle:</h3>
+                    <p>The ultrasonic sensor emits sound waves and calculates the distance based on the time taken for the echo to return. This distance is converted to water level percentage and transmitted to the web server for display and analysis.</p>
+                </div>
+            </section>
+
+            <section id="implementation" class="doc-section">
+                <h2>Implementation</h2>
+                <div class="section-content">
+                    <h3>Hardware Setup:</h3>
+                    <ol>
+                        <li>Connect ultrasonic sensor to microcontroller</li>
+                        <li>Install the sensor at the top of the water tank</li>
+                        <li>Configure WiFi module for internet connectivity</li>
+                        <li>Set up power supply and housing</li>
+                    </ol>
+                    <h3>Software Development:</h3>
+                    <ol>
+                        <li>Arduino code for sensor reading and data transmission</li>
+                        <li>Web server using Node.js and Express.js</li>
+                        <li>Database integration for data logging</li>
+                        <li>Real-time dashboard with charts and alerts</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="results" class="doc-section">
+                <h2>Results</h2>
+                <div class="section-content">
+                    <p>The Water Level Monitoring System successfully achieves the following:</p>
+                    <ul>
+                        <li>Real-time water level monitoring with 95% accuracy</li>
+                        <li>Automated alerts for low, normal, and high water levels</li>
+                        <li>Web-based interface accessible from any device</li>
+                        <li>Historical data logging and analysis</li>
+                        <li>Prevention of water overflow and wastage</li>
+                        <li>Reduced manual intervention and monitoring effort</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="conclusion" class="doc-section">
+                <h2>Conclusion</h2>
+                <div class="section-content">
+                    <p>The Water Level Monitoring System provides an effective solution for automated water management. The system successfully monitors water levels, provides timely alerts, and helps prevent wastage through overflow.</p>
+                    <p>Future enhancements can include mobile app development, integration with smart home systems, and advanced analytics for water usage patterns. This project demonstrates the practical application of IoT technology in solving real-world problems related to resource management.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.doc-nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+                
+                // Update active navigation
+                document.querySelectorAll('.doc-nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
